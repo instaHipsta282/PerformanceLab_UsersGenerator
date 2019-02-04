@@ -12,7 +12,9 @@ public class UsersGenerator {
 
         try {
             String usersPath = reader.readLine();
-            writer1 = new BufferedWriter(new FileWriter(usersPath + "\\parametersFile.dat"));
+            System.out.println("And path to the folder with your script");
+            String scriptPath = reader.readLine();
+            writer1 = new BufferedWriter(new FileWriter(scriptPath + "\\parametersFile.dat"));
             writer1.write("username password\r\n");
             writer1.flush();
             for (int i = 0; i < 100; i++) {
